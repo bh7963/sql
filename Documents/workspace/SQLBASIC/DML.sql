@@ -55,6 +55,6 @@ INSERT INTO example_table
 SELECT * FROM example_table WHERE column1 IS NULL; 
 
 -- UPDATE SELECT : 수정 작업시 조회 결과를 사용하여 수정(수정 값에 대하여)
-UPDATE example_table A
-SET A.column1 = (SELECT B.num FROM auto_table B 
+UPDATE example_table A SET A.column1 = (
+SELECT B.num FROM auto_table B 
 WHERE B.idx = 1);
