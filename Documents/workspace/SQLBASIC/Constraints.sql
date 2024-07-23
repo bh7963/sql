@@ -113,3 +113,25 @@ SELECT * FROM key_table;
 SELECT * FROM optional_foreign_table;
 
 DELETE FROM key_table;
+
+-- CHECK 제약조건 : 해당 컬럼에 값을 제한하는 제약
+CREATE TABLE chek_table (
+	primary_column INT PRIMARY KEY,
+    check_column VARCHAR(5) CHECK(check_column IN ('남', '여'))
+);
+-- CHECK 제약조건이 걸린 컬럼에 조건에 해당하지 않는 값을 삽입, 수정 할 수 없음
+INSERT INTO chek_table VALUES (1, '남');
+INSERT INTO chek_table VALUES (2, '남자');
+UPDATE chek_table SET check_column = '여자';
+
+-- DEFAULT 제약조건 : 해당 컬럼에 삽입시 값이 지정되지 않으면 기본값으로 지정하는 제약
+CREATE TABLE default_table (
+	-- AUTO_INCREMENT : 기본키가 정수형일 때 기본키의 값을 1씩 증가하는 값으로 자동 지정
+	primary_column INT PRIMARY KEY AUTO_INCREMENT,
+    column1 INT,
+    default_column INT DEFAULT 10 
+);
+
+INSERT INTO default_table(column1) VALUES (99);
+SELECT * FROM default_table;
+ 
