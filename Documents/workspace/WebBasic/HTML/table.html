@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 테이블 요소</title>
+    <style>
+        th, td{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <table></table> : 화면에 테이블(표)를 만들기 위한 요소 -->
+    <!-- <table></table> 요소의 내용으로 <tr><td><th>를 구성 -->
+    <!-- <tr></tr> : 테이블의 하나의 행을 나타내는 요소, <th>, <td>로 구성 -->
+    <!-- <th></th> : 테이블의 제목을 나타내는 요소-->
+    <!-- <td></td> : 테이블의 데이터 셀을 나타내는 요소 -->
+
+    <table>
+        <tr>
+            <th> 이름 </th>
+            <th> 나이 </th>
+            <th> 주소 </th>
+        </tr>
+        <tr>
+            <td> 홍길동 </td>
+            <td> 20 </td>
+            <td> 부산 </td>
+        </tr>
+
+        <tr>
+            <td> 이영희 </td>
+            <td> 30 </td>
+            <!-- rowspan, colspan : 셀의 사이즈 지정 -->
+            <td rowspan = "5"> 서울 </td>
+        </tr>
+        <!-- 테이블 작업시 td, th의 갯수 주의 -->
+        <tr>
+            <td> 고길동 </td>
+            <td> 56 </td>
+        </tr>
+    </table>
+
+    <!-- html 테이블에는 각 영역을 그룹화하는 <thead>, <tbody>, <tfoot>요소가 존재 -->
+    <table>
+        <thead>
+            <tr>
+                <th>순번</th>
+                <th>금액</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>$10000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>총합</td>
+                <td>$10000</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

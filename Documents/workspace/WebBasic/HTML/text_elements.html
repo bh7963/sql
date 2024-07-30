@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 텍스트 요소</title>
+</head>
+<body>
+    <!-- html문서는 줄바꿈을 인식하지 못함-->
+    <!-- 줄 바꿈을 적용하고 싶다면 <br />태그를 줄바꿈할 위치에 작성-->
+    내가 그린 기린 그림은 잘 그린 기린 그림이고<br />
+    네가 그린 기린 그림은 잘 못그린 기린 그림이다.<br />
+
+    <!-- html 문서는 띄워쓰기를 한번만 인식 -->
+    <!-- 띄워쓰기를 여러번 적용하고자 한다면 &nbsp;을 사용함-->
+    안녕하세요&nbsp;&nbsp;&nbsp;&nbsp;안녕하세요<br />
+    
+    <!-- html 문서는 <, > 사용시 태그로 인식 할 수 있음 -->
+    <!-- <, >을 문자로 사용하고 싶다면 &lt:, &gt;을 사용함 -->
+    우승 국가는 &lt;&gt; 입니다. <br />
+
+    <!-- <p> : 하나의 문단을 표현하는 요소 -->
+    <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie nunc nunc, 
+        id sodales erat malesuada sit amet. Vivamus posuere sed ex sit amet mollis. 
+        Etiam rhoncus sed magna vel finibus. Pellentesque luctus dignissim ipsum, 
+        in vehicula ligula tincidunt id. Etiam euismod arcu purus, eu pulvinar ante rutrum interdum. 
+        Etiam efficitur bibendum tempus. Pellentesque bibendum lacus id eros commodo, 
+        id dictum lectus tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. 
+        In pellentesque, justo nec pharetra semper, lectus dolor laoreet mauris, ut dapibus massa elit vitae lectus. 
+        Nam aliquet leo suscipit commodo maximus. Nunc pellentesque et ante eget aliquet. 
+        Nullam a turpis ultrices turpis vehicula pellentesque id vel augue. Curabitur metus sem, blandit quis nisl ac, 
+        condimentum fermentum arcu. Cras efficitur urna vel commodo suscipit. Nam a imperdiet enim.
+    </p>
+    <p>
+        orem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie nunc nunc, id sodales erat malesuada sit amet. Vivamus posuere sed ex sit amet mollis. Etiam rhoncus sed magna vel finibus. Pellentesque luctus dignissim ipsum, in vehicula ligula tincidunt id. Etiam euismod arcu purus, eu pulvinar ante rutrum interdum. Etiam efficitur bibendum tempus. Pellentesque bibendum lacus id eros commodo, id dictum lectus tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. In pellentesque, justo nec pharetra semper, lectus dolor laoreet mauris, ut dapibus massa elit vitae lectus. Nam aliquet leo suscipit commodo maximus. Nunc pellentesque et ante eget aliquet. Nullam a turpis ultrices turpis vehicula pellentesque id vel augue. Curabitur metus sem, blandit quis nisl ac, condimentum fermentum arcu. Cras efficitur urna vel commodo suscipit. Nam a imperdiet enim.
+    </p>
+
+    <!-- html의 태그는 대소문자를 구분하지 않음 -->
+    <P>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie nunc nunc, id sodales erat malesuada sit amet. Vivamus posuere sed ex sit amet mollis. Etiam rhoncus sed magna vel finibus. Pellentesque luctus dignissim ipsum, in vehicula ligula tincidunt id. Etiam euismod arcu purus, eu pulvinar ante rutrum interdum. Etiam efficitur bibendum tempus. Pellentesque bibendum lacus id eros commodo, id dictum lectus tincidunt. Interdum et malesuada fames ac ante ipsum primis in faucibus. In pellentesque, justo nec pharetra semper, lectus dolor laoreet mauris, ut dapibus massa elit vitae lectus. Nam aliquet leo suscipit commodo maximus. Nunc pellentesque et ante eget aliquet. Nullam a turpis ultrices turpis vehicula pellentesque id vel augue. Curabitur metus sem, blandit quis nisl ac, condimentum fermentum arcu. Cras efficitur urna vel commodo suscipit. Nam a imperdiet enim.</P>
+
+    <!-- html은 문법상 오류가 있다 하더라도 에러를 출력하지 않음 -->
+    <!-- ex : 태그를 닫지 않음 -->
+    <!-- <p>안녕하세요. -->
+
+    <!-- XML 기반의 html은 대소문자 및 문법을 반드시 지켜야 정상 작동함 --> 
+    
+    <!-- <h1></h1> ~ <h6></h6> : 제목을 표시하기 위한 요소 -->
+    <h1>h1 제목</h1>
+    <h2>h2 제목</h2>
+    <h3>h3 제목</h3>
+    <h6>h6 제목</h6>
+    
+    <!-- <strong></strong> : 특정 문자나 단어, 문단을 강조하기 위해 사용하는 요소 -->
+    <p>부산 광역시 부산진구 <strong>중앙대로</strong> 6681</p>
+
+    <!-- <em></em> : 특정 문자나 단어, 문단을 강조하기 위해 사용하는 요소 -->
+    <p>부산 광역시 부산진구 <em>중앙대로</em> 6681</p>
+
+    <p>부산 광역시 부산진구 <strong><em>중앙대로</em></strong> 6681</p>
+
+
+</body>
+</html> 
