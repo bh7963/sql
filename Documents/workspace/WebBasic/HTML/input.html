@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HTML 입력 요소 </title>
+</head>
+<body>
+    <!-- <input /> : 사용자로부터 입력을 받는 기본적인 요소 -->
+
+    <!-- type 속성 : 입력 요소의 형태를 지정 -->
+
+    <!-- text : type의 기본값, 문자열을 그대로 입력받음 -->
+    <input type = "text" /> <br />
+    <!-- password : 입력받은 문자열을 가림 -->
+    <input type = "password" /><br />
+
+    <!-- 날짜와 관련된 타임은 firefox에서는 지원 안됨 -->
+    <!-- date : 날짜를 UI를 통해서 입력 받음 -->
+    <input type = "date" /> <br />
+    <!-- time : 시간을 UI를 통해서 입력 받음 -->
+    <input type = "time" /> <br />
+    <!-- datetime-local : 날짜 및 시간을 UI를 통해서 입력 받음 -->
+    <input type = "datetime-local" /> <br />
+
+    <!-- file : 파일을 입력 받음 -->
+    <input type = "file" /> <br />
+    <!-- accept : 파일 입력시 확장자에 대한 제한 -->
+    <input type = "file" accept="video/*" /> <br />
+
+    <!-- number : 숫자만 입력받을 수 있음 -->
+    <input type = "number" /> <br />
+    <!-- min, max, setp : 최솟값, 최댓값, 스텝 -->
+    <input type = "number" min = "-10" max = "10" step = "3" /> <br />
+
+    <!-- range : 숫자의 선택폭의 제한 -->
+    <input type = "range" min = "-10" max = "10" step = "3" /> <br />
+    <hr />
+    <!-- check box : 주어진 리스트 중에서 복수를 선택-->
+    <!-- name 속성으로 체크박스를 그룹화 -->
+    <!-- value 속성이 반드시 필요함 -->
+    <form>
+        <input type = "checkbox" name = "skill" value = "Java"/> Java 
+        <input type = "checkbox" name = "skill" value = "Python"/> Python
+        <input type = "checkbox" name = "skill" value = "C"/> C
+        <input type = "checkbox" name = "skill" value = "Ruby"/> Ruby
+        <button>제출</button>
+    </form>
+    <!-- radio : 주어진 리스트 중에서 하나를 선택 -->
+    <!-- name 속성으로 라디오를 그룹화 -->
+    <!-- value 속성이 반드시 필요-->
+    <input type = "radio" name = "a" value = "x"/>
+    <input type = "radio" name = "a" value = "y"/>
+    <input type = "radio" name = "b" value = "x"/>
+    <input type = "radio" name = "b" value = "y"/>
+
+    <!-- hidden : 화면상에 보이지 않음 -->
+    <form>
+        <input type = "hidden" name = "hiddenData" value = "Hello" />
+        <button>제출</button>
+    </form>
+
+    <!-- checked 속성 : checkbox 와 radio 타입에 초기 선택여부 지정 -->
+    <input type = "checkbox" checked /><br />
+    <input type = "checkbox" /><br />
+
+    <!-- readonly 속성 : 입력 요소를 읽기전용으로 지정 -->
+    <input type = "text" value ="기본값" readonly />
+
+    <!-- disalbed 속성 : 입력 요소를 사용하지 않는 것으로 지정 -->
+    <input type = "text" value = "사용 불가" disabled />
+
+    <!-- <hr /> : 구분 선 -->
+    <hr />
+
+    <!-- <select></select> : 주어진 리스트에서 특정 요소를 선택할 때 사용하는 요소 -->
+    <!-- multiple 속성 : 다중 선택 가능 -->
+    <select multiple>
+        <!-- <option></option> : 선택할 수 있는 항목 요소 -->
+        <!-- option 요소의 컨텐츠 실제 값이 아님, 실제 값은 value속성으로 지정 -->
+        <!-- selected 속성 : 초기 선택 여부 지정 -->
+        <option value = "apple" >사과</option>
+        <option value = "banana" selected    >바나나</option>
+        <option value = "cacao">카카오</option>
+    </select>
+    <hr />
+
+    <!-- <textarea></textarea> : 문자열을 여러줄에 걸쳐서 작성할 수 있도록 하는 요소 -->
+    <!-- rows, cols 속성 : textarea의 크기를 지정 -->
+    <!-- value 속성을 사용하지 않음, 만약에 기본값을 지정하고 싶을 땐 요소의 컨텐츠로 지정 -->
+    <textarea rows = "10" cols = "10">텍스트 에어리어 기본값 </textarea>
+
+</body>
+</html>
