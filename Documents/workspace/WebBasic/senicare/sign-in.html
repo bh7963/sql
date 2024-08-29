@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시니케어</title>
+
+  <link rel="stylesheet" href="auth-style.css" />
+  <link rel="stylesheet" href="common.css" />
+
+  
+</head>
+
+<body>
+  <div id="auth-wrapper">
+    <div class="auth-image"></div>
+    <div class="auth-container">
+      <div class="auth-box">
+        <div class="title-box">
+          <div class="title">시니케어</div>
+          <div class="logo"></div>
+        </div>
+
+        <div class="input-container">
+          <div class="input-box">
+            <div class = input-area">
+            <div class="label">아이디</div>
+            <input id = "user-id" type="text" placeholder="아이디를 입력해주세요" />
+          </div>
+            <div class="message"></div>
+          </div>
+
+          <div class="input-box">
+            <div class="label">비밀번호</div>
+            <div class = "input-area">
+            <input id = "user-password" type="password" placeholder="비밀번호를 입력해주세요" />
+            </div>
+            <div id = "message" class="message error"></div>
+          </div>
+        </div>
+        
+        <div class="button-container">
+          <div id = "sign-in-button" class="button primary full-width">로그인</div>
+          <div class="link" onclick = "location.href = '/sign-up.html'">회원가입</div>
+        </div>
+        <div style="width:64px;" class="divider"></div>
+        <div class="sns-container">
+          <div class="sns-title">SNS 로그인</div>
+          <div class="sns-button-container">
+            <div class="sns-button kakao"></div>
+            <div class="sns-button naver"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src = "./sign-in.js"></script>
+</body>
+</html>
