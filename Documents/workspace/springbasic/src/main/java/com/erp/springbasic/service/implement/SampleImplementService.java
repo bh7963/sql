@@ -1,12 +1,16 @@
 package com.erp.springbasic.service.implement;
 
+import java.util.List;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-
 import com.erp.springbasic.dto.PostSample1RequestDto;
 import com.erp.springbasic.entity.SampleTable1Entity;
+import com.erp.springbasic.entity.SampleUserEntity;
+import com.erp.springbasic.provider.JwtProvider;
 import com.erp.springbasic.repository.SampleTable1Repository;
+import com.erp.springbasic.repository.SampleUserRepository;
 import com.erp.springbasic.service.SampleService;
 
 import lombok.RequiredArgsConstructor;
@@ -17,7 +21,9 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SampleImplementService implements SampleService {
 
+    private final SampleUserRepository sampleUserRepository;
     private final SampleTable1Repository sampleTable1Repository;
+    private final JwtProvider jwtProvider;
 
     @Override
     public ResponseEntity<String> postSample1(PostSample1RequestDto dto) {
@@ -44,5 +50,44 @@ public class SampleImplementService implements SampleService {
         
 
         return ResponseEntity.status(HttpStatus.CREATED).body("성공");
+
+
 }
+
+    @Override
+    public ResponseEntity<String> deleteSample1(String sampleId) {
+
+
+       // DELETE (SQL : DELETE)
+        // 1. repository를 이용하여 ID(PK)에 해당하는 레코드 삭제
+        //    - 해당하는 레코드가 존재하지 않아도 에러가 발생하지 않음
+        sampleTable1Repository.deleteById(sampleId);
+
+        // 2. repository를 이용하여 Entity에 해당하는 레코드 삭제
+        //    - 해당하는 레코드가 존재하지 않을때 수행 불가능
+        SampleTable1Entity entity = sampleTable1Repository.findById(sampleId).get();
+        sampleTable1Repository.delete(entity);
+
+        return ResponseEntity.status(HttpStatus.OK).body("성공");
+        
+    }
+
+    @Override
+    public ResponseEntity<String> queryString() {
+
+        List<SampleUserEntity> sampleUserEntities = sampleUserRepository.getNativeSql("홍길동", "부산광역시");
+        return ResponseEntity.status(HttpStatus.OK).body(sampleUserEntities.toString());
+    }
+
+    @Override
+    public String getJwt(String name) {
+        String jwt = jwtProvider.create(name);
+        return jwt;
+    }
+
+    @Override
+    public String validateJwt(String jwt) {
+        String subject =  jwtProvider.validate(jwt);
+        return subject;
+    }
 }
